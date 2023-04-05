@@ -1,0 +1,63 @@
+.container{
+    display: flex;
+    color: white;
+    overflow-x: auto;
+}
+
+.h2{
+    align-self: flex-end;
+    font-size: 35px;
+    margin: 0;
+}
+
+.toggleContainer{
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.toggleTitle{
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-self: flex-end;
+}
+
+.toggleSelection{
+    align-self: flex-end;
+    width: 100px;
+    margin-left: 20px;
+}
+
+.typeContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 80px;
+}
+
+.toggleType{
+    font-size: 13px
+}
+
+.selection{
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 10px;
+    width: 90px;
+    height: 22px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggleActive{
+    width: 15px;
+    height: 70%;
+    border-radius: 30px;
+    background-color: hsl(6, 63%, 50%);
+    margin: auto 4px;
+}

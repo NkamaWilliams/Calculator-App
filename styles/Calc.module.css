@@ -1,0 +1,12 @@
+.main1{
+    background-color: hsl(222, 26%, 31%);
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+.container{
+    display: block;
+    max-width: 500px;
+    margin: 70px auto;
+    overflow-y: auto;
+}
