@@ -1,8 +1,9 @@
 import Head from 'next/head';
+import styles from "@/pages/styles.js"
 import Image from 'next/image';
 import Welcome from './welcome';
 import Header from './header';
-import style from '@/styles/Calc.module.css';
+import Calc from '@/styles/Calc.module.css';
 // import { Inter } from 'next/font/google'
 // import styles from '@/styles/Home.module.css'
 
@@ -124,8 +125,8 @@ export default function Home() {
       </main> */}
 
 
-      <main className={style.main1}>
-        <div className={style.container}>
+      <main className={Calc.main1}>
+        <div className={Calc.container}>
           <Header />
         </div>
       </main>
