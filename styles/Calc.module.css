@@ -1,5 +1,5 @@
 .main1{
-    background-color: hsl(222, 26%, 31%);
+    background-color: var(--bg1);
     min-height: 100vh;
     overflow-y: hidden;
 }

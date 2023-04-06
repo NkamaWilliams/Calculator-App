@@ -44,7 +44,7 @@
 }
 
 .selection{
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--togbg1);
     border-radius: 10px;
     width: 90px;
     height: 22px;
@@ -58,6 +58,6 @@
     width: 15px;
     height: 70%;
     border-radius: 30px;
-    background-color: hsl(6, 63%, 50%);
-    margin: auto 4px;
+    background-color: var(--key1bg2);
+    margin: auto 5px;
 }
