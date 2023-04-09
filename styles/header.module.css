@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    color: white;
+    color: var(--text11);
     overflow-x: auto;
 }
 

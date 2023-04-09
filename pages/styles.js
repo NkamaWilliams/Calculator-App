@@ -1,5 +1,6 @@
 const styles = [
     {
+        //Gray background
         bg1: 'hsl(222, 26%, 31%)',
         togbg1: 'hsl(223, 31%, 20%)',
         screenbg: 'hsl(224, 36%, 15%)',
@@ -9,11 +10,12 @@ const styles = [
         key1sh2: 'hsl(6, 70%, 34%)',
         key1bg3: 'hsl(30, 25%, 89%)',
         key1sh3: 'hsl(28, 16%, 65%)',
-        text11: 'hsl(221, 14%, 31%)',
+        text11: 'hsl(0, 0%, 100%)',
         text12: 'hsl(0, 0%, 100%)'
     },
 
     {
+        //White Background
         bg1: 'hsl(0, 0%, 90%)',
         togbg1: 'hsl(0, 5%, 81%)',
         screenbg: 'hsl(0, 0%, 93%)',
@@ -28,6 +30,7 @@ const styles = [
     },
 
     {
+        //Purple Background
         bg1: 'hsl(268, 75%, 9%)',
         togbg1: 'hsl(268, 71%, 12%)',
         screenbg: 'hsl(281, 89%, 26%)',
@@ -37,7 +40,7 @@ const styles = [
         key1sh2: 'hsl(268, 47%, 21%)',
         key1bg3: 'hsl(290, 70%, 36%)',
         key1sh3: 'hsl(52, 100%, 62%)',
-        text11: 'hsl(198, 20%, 13%)',
+        text11: 'hsl(52, 100%, 62%)',
         text12: 'hsl(0, 0%, 100%)'
     }
 ]

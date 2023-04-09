@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 export default function Header(){
     const [headState, setHead] = useState({
-      toggleValue: 0,
+      toggleValue: 1,
       numOfValues: 3
     })
 
@@ -12,19 +12,23 @@ export default function Header(){
 
     const selectButton = [1, 2, 3].map(i => headState.toggleValue === i-1? <div className={head.toggleActive}></div> : <div></div>)
     
-    function clickButton(){
+    function clickButton(): void{
       setHead(prev => {return {
         ...prev,
         toggleValue: (headState.toggleValue + 1) % headState.numOfValues
       }});
-      console.log(styles[0]);
-      // changeStyles();
+      changeStyles();
     }
 
-    // function changeStyles(){
-    //   const rt = document.querySelector(':root');
-    //   let rs = getComputedStyle(rt);
-    // }
+    function changeStyles(){
+      let style = styles[headState.toggleValue];
+      let values = Object.values(style), counter = 0;
+      const styleKeys = Object.keys(style);
+      styleKeys.forEach(i => {
+        document.documentElement.style.setProperty(`--${i}`, values[counter]);
+        counter++;
+      })
+    }
     return(
         <header className={head.container}>
             <h2 className={head.h2}>calc</h2>
