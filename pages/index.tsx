@@ -128,7 +128,6 @@ export default function Home() {
       <main className={Calc.main1}>
         <div className={Calc.container}>
           <Header />
-          WOOOOOOOW
         </div>
       </main>
 
