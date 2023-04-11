@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import styles from "@/pages/styles.js"
+import {useState} from 'react'
 import Image from 'next/image';
+import Screen from './screen';
 import Welcome from './welcome';
 import Header from './header';
 import Calc from '@/styles/Calc.module.css';
@@ -12,6 +14,11 @@ import Calc from '@/styles/Calc.module.css';
 //MAIN BRANCH
 
 export default function Home() {
+  const [main, setMain] = useState({
+    disp: "399,981",
+    input: [],
+    command: ""
+  })
   return (
     <>
       <Head>
@@ -130,6 +137,7 @@ export default function Home() {
       <main className={Calc.main1}>
         <div className={Calc.container}>
           <Header />
+          <Screen disp={main.disp}/>
         </div>
       </main>
 
