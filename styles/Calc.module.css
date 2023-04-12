@@ -1,12 +1,23 @@
 .main1{
     background-color: var(--bg1);
     min-height: 100vh;
-    overflow-y: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
 .container{
     display: block;
     max-width: 500px;
-    margin: 70px auto;
+    margin: 60px auto;
     overflow-y: auto;
+}
+
+@media screen and (width < 551px){
+    .main1{
+        padding: 0 20px;
+    }
+
+    .container{
+        margin: 30px auto;
+    }
 }

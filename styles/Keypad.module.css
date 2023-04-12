@@ -1,0 +1,56 @@
+.keypad{
+    width: 100%;
+    background-color: var(--keypad);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.key{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.key span{
+    background-color: var(--key1bg3);
+    box-shadow: 0 5px var(--key1sh3);
+    color: var(--keytext1);
+    width: 20%;
+    height: 55px;
+    margin: 8px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.key .del, .key .reset{
+    background-color: var(--key1bg1);
+    box-shadow: 0 5px var(--key1sh1);
+    color: var(--keytext2);
+}
+
+.key .equals{
+    background-color: var(--key1bg2);
+    box-shadow: 0 5px var(--key1sh2);
+    color: var(--keytext3);
+}
+
+.key .reset, .key .equals{
+    width: 45%;
+}
+
+@media screen and (width < 551px){
+    .keypad{
+        padding: 10px 5px;
+    }
+    .key span{
+        font-size: 1.5em;
+        height: 45px;
+        width: 24%;
+        margin: 10px 5px;
+    }
+}

@@ -10,8 +10,11 @@
   --key1sh2: hsl(6, 70%, 34%);
   --key1bg3: hsl(30, 25%, 89%);
   --key1sh3: hsl(28, 16%, 65%);
-  --text11: hsl(0, 0%, 100%);
-  --text12: hsl(0, 0%, 100%);
+  --headtext: hsl(0, 0%, 100%);
+  --keytext1: hsl(221, 14%, 31%);
+  --keytext2: hsl(0, 0%, 100%);
+  --keytext3: hsl(0, 0%, 100%);
+  --keypad: hsl(223, 31%, 20%);
 }
 
 body{

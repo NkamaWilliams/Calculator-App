@@ -3,7 +3,7 @@
     background-color: var(--screenbg);
     height: 70px;
     margin: 10px 0;
-    color: var(--text11);
+    color: var(--headtext);
     overflow-y: auto;
     box-sizing: border-box;
     display: flex;
