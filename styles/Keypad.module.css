@@ -43,6 +43,23 @@
     width: 45%;
 }
 
+.key span:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.key span:active{
+    box-shadow: 0 -5px var(--key1sh3);
+}
+
+.key .reset:active, .key .del:active{
+    box-shadow: 0 -5px var(--key1sh1);
+}
+
+.key .equals:active{
+    box-shadow: 0 -5px var(--key1sh2);
+}
+
 @media screen and (width < 551px){
     .keypad{
         padding: 10px 5px;
