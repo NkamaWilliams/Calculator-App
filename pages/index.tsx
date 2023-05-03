@@ -12,15 +12,53 @@ import Calc from '@/styles/Calc.module.css';
 
 // const inter = Inter({ subsets: ['latin'] })
 
-//SCREEN BRANCH
+interface mainInter {
+  disp: string,
+  input: string
+}
 
 export default function Home() {
-  const [main, setMain] = useState({
+  const reset = ():void => {
+    setMain({...main, disp:"", input:""})
+  }
+
+  const input = (num: string) => {
+    if (/\.|\+|-|x|\//.test(num)){
+      if (num === "."){
+        /\./.test(main.input)? setMain({...main}) : setMain({...main, disp: main.disp + num, input: main.input + num})
+      }
+      else{
+        setMain({...main, disp: main.disp + " " + num + " ", input:""})
+      }
+    }
+    else{
+      setMain({...main, disp: main.disp + num, input: main.input + num})
+    }
+    console.log(main)
+  }
+
+  const del = () => {
+    let newDisp = main.disp
+    // newDisp = newDisp.length == 1? "" : newDisp.slice(0, newDisp.length - 1)
+    setMain({...main, disp: newDisp.slice(0, newDisp.length - 1)})
+  }
+
+  const equals = () => {
+    let exp = main.disp
+    exp = exp.replaceAll("x", "*")
+    console.log(exp)
+    let ans = Number(eval(exp))
+    exp = Number.isInteger(ans)? ans.toString() :ans.toFixed(5)
+    setMain({...main, disp: exp, input: exp})
+  }
+
+  // create state
+  const [main, setMain] = useState<mainInter>({
     disp: "399,981",
-    input: [],
-    command: ""
+    input: ""
   })
 
+  //create a list of all available buttons
   const buttons = [
     {7: '7', 8:'8', 9: '9', del: 'DEL'},
     {4: '4', 5: '5', 6: '6', plus: '+'},
@@ -29,14 +67,15 @@ export default function Home() {
     {reset: 'RESET', equals: '='}
   ]
 
+  //turn the button list into JSX Elements
   const key = buttons.map(i => {
-    let val = Object.values(i);
+    let val: string[] = Object.values(i);
     const row = val.map(x => {
       switch(x){
-        case "DEL": return <span className={keyStyles.del}>{x}</span>
-        case "RESET": return <span className={keyStyles.reset}>{x}</span>
-        case "=": return <span className={keyStyles.equals}>{x}</span>
-        default: return <span>{x}</span>
+        case "DEL": return <span className={keyStyles.del} onClick={del}>{x}</span>
+        case "RESET": return <span onClick={reset} className={keyStyles.reset}>{x}</span>
+        case "=": return <span onClick={equals} className={keyStyles.equals}>{x}</span>
+        default: return <span onClick={() => input(x)}>{x}</span>
       }
     });
     return <div className={keyStyles.key}>{row}</div>;

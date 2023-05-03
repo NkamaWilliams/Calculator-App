@@ -49,15 +49,15 @@
 }
 
 .key span:active{
-    box-shadow: 0 -5px var(--key1sh3);
+    box-shadow: 0 -2px var(--key1sh3);
 }
 
 .key .reset:active, .key .del:active{
-    box-shadow: 0 -5px var(--key1sh1);
+    box-shadow: 0 -2px var(--key1sh1);
 }
 
 .key .equals:active{
-    box-shadow: 0 -5px var(--key1sh2);
+    box-shadow: 0 -2px var(--key1sh2);
 }
 
 @media screen and (width < 551px){
