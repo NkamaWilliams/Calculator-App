@@ -44,17 +44,24 @@ export default function Home() {
   }
 
   const equals = () => {
-    let exp = main.disp
+    let exp:string|null = main.disp
+    let valDisp = /\.\d+(0+)$/
     exp = exp.replaceAll("x", "*")
     console.log(exp)
     let ans = Number(eval(exp))
-    exp = Number.isInteger(ans)? ans.toString() :ans.toFixed(5)
+    if (Number.isInteger(ans)){
+      exp = ans.toString()
+    }
+    else{
+      exp = ans.toFixed(10)
+      exp = valDisp.test(exp)? exp.replace(/0+$/, ""):exp
+    }
     setMain({...main, disp: exp, input: exp})
   }
 
   // create state
   const [main, setMain] = useState<mainInter>({
-    disp: "399,981",
+    disp: "",
     input: ""
   })
 

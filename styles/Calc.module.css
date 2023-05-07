@@ -15,6 +15,12 @@
     overflow-y: auto;
 }
 
+@media screen and (width < 800px){
+    .container{
+        width: 70%;
+    }
+}
+
 @media screen and (width < 551px){
     .main1{
         padding: 0 20px;
