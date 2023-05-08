@@ -1,5 +1,5 @@
 import head from '@/styles/header.module.css'
-import styles from './styles'
+import styles from '../public/styles.js'
 import { useState } from 'react'
 
 export default function Header(){
