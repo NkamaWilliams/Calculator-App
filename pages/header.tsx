@@ -8,9 +8,9 @@ export default function Header(){
       numOfValues: 3
     })
 
-    const toggleType = [1, 2, 3].map(i => <span className={head.toggleType}>{i}</span>)
+    const toggleType = [1, 2, 3].map(i => <span key={i} className={head.toggleType}>{i}</span>)
 
-    const selectButton = [1, 2, 3].map(i => headState.toggleValue === i-1? <div className={head.toggleActive}></div> : <div></div>)
+    const selectButton = [1, 2, 3].map(i => headState.toggleValue === i-1? <div key={i} className={head.toggleActive}></div> : <div key={i}></div>)
     
     function clickButton(): void{
       setHead(prev => {return {

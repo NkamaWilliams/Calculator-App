@@ -4,7 +4,6 @@ import keyStyles from '@/styles/Keypad.module.css'
 import {useState} from 'react'
 import Image from 'next/image';
 import Screen from './screen';
-import Welcome from './welcome';
 import Header from './header';
 import Calc from '@/styles/Calc.module.css';
 // import { Inter } from 'next/font/google'
@@ -79,13 +78,13 @@ export default function Home() {
     let val: string[] = Object.values(i);
     const row = val.map(x => {
       switch(x){
-        case "DEL": return <span className={keyStyles.del} onClick={del}>{x}</span>
-        case "RESET": return <span onClick={reset} className={keyStyles.reset}>{x}</span>
-        case "=": return <span onClick={equals} className={keyStyles.equals}>{x}</span>
-        default: return <span onClick={() => input(x)}>{x}</span>
+        case "DEL": return <span key={x} className={keyStyles.del} onClick={del}>{x}</span>
+        case "RESET": return <span key={x} onClick={reset} className={keyStyles.reset}>{x}</span>
+        case "=": return <span key={x} onClick={equals} className={keyStyles.equals}>{x}</span>
+        default: return <span key={x} onClick={() => input(x)}>{x}</span>
       }
     });
-    return <div className={keyStyles.key}>{row}</div>;
+    return <div key={buttons.indexOf(i)} className={keyStyles.key}>{row}</div>;
   })
   
   return (
